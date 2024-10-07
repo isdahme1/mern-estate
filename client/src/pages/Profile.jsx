@@ -143,7 +143,7 @@ export default function Profile() {
       }
 
       setUserListing(data);
-    } catch (error) {
+    } catch {
       setShowListingError(true);
     }
   };
