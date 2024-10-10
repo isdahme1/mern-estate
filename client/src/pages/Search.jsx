@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ListingItem from "../components/ListingItem";
-import { compareSync } from "bcryptjs";
 
 export default function Search() {
   const [sidebarData, setSidebarData] = useState({
@@ -96,7 +95,7 @@ export default function Search() {
       });
     }
 
-    if (e.target.sort === "sort_order") {
+    if (e.target.id === "sort_order") {
       const sort = e.target.value.split("_")[0] || "created_at";
       const order = e.target.value.split("_")[1] || "desc";
 
